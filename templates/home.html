@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heart Attack Prediction</title>
+    <style>
+        * {
+            font-size: 2vw;
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        body {
+            background-color: rgba(68, 68, 148, 0.8);
+
+        }
+
+        .column {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 5%;
+
+            background-color: #272746;
+            border-radius: 25px;
+            width: 100%;
+
+
+        }
+
+
+        fieldset {
+            margin-top: 5%;
+            border: 0;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .sec {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .space {
+            margin-top: 5%;
+        }
+
+        .length {
+            width: 100%;
+            border-radius: 0.25rem;
+
+            padding: 0.25rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;font-size: 40px;">Enter the details</h1>
+    <section class="sec">
+        <form action="/check" method="POST">
+
+
+            <div class="column">
+                <div>
+                    <h3>Age</h3>
+                    <input class="length" type="number" placeholder="Enter Age" name="a" required>
+                </div>
+
+                <div class="space">
+                    <h3>Select Gender</h3>
+
+                    <input type="radio" name="g" value="1">Male</input>
+                    <input type="radio" name="g" value="0">Female</input>
+                </div>
+
+
+
+
+                <fieldset>
+                    <h3> Chest Pain type</h3>
+
+                    <label>
+                        <input name="cp" value="1" type="radio" required />Typical angina</label>
+                    <label>
+                        <input name="cp" value="2" type="radio" />Atypical ngina</label>
+
+                    <label><input name="cp" value="3" type="radio" />Non-anginal pain</label>
+                    <label><input name="cp" value="4" type="radio" />asymptomatic</label>
+                </fieldset>
+
+
+
+
+                <div class="space">
+                    <h3>Resting BP</h3>
+                    <input class="length" type="number" placeholder=" Resting blood pressure" name="trtbps" required>
+                </div>
+                <div class="space">
+                    <h3>Cholestoral</h3>
+                    <input class="length" type="number" placeholder=" Enter Cholestoral in mg/dl" name="chol" required>
+                </div>
+
+                <div class="space">
+                    <h3>Is fasting blood sugar greater
+                        than 120 mg/dl ?
+                    </h3>
+
+                    <input type="radio" name="fs" value="1"> Yes</input>
+                    <input type="radio" name="fs" value="2" required> No</input>
+                </div>
+
+                <fieldset>
+                    <h3> What are resting electrocardiographic results</h3>
+
+                    <label>
+                        <input name="rest_ecg" value="0" type="radio" required />Normal</label>
+                    <label>
+                        <input name="rest_ecg" value="1" type="radio" />Having ST-T wave abnormality</label>
+
+                    <label><input name="rest_ecg" value="2" type="radio" />Showing lifestyle
+                        ventricular hypertrophy</label>
+
+                </fieldset>
+
+
+                <div class="space">
+                    <h3>Max Heart Rate</h3>
+                    <input class="length" type="number" placeholder=" Maximum heart rate achieved " name="thalach"
+                        required>
+                </div>
+                <div class="space">
+                    <h3> Exercise induced angina </h3>
+                    <input type="radio" name="exang" value="1"> Yes</input>
+                    <input type="radio" name="exang" value="2" required> No</input>
+                </div>
+
+                <div class="space">
+                    <h3> Number of major vessels (0-3)</h3>
+
+                    <input type="radio" name="ca" value="0" required> 0</input>
+                    <input type="radio" name="ca" value="1"> 1</input>
+                    <input type="radio" name="ca" value="2"> 2</input>
+                    <input type="radio" name="ca" value="3"> 3</input>
+                </div>
+
+
+                <center style="padding-top: 10px;">
+                    <input class="length" type="submit" style="background-color: #37af65;">
+                </center>
+
+            </div>
+
+
+        </form>
+    </section>
+</body>
+
+</html>
